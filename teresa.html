@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>iTutor</title>
+    <link rel="icon" href="iTutor.ico">
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/css/style.css">
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div id="paragraphs">
+        <div class="container">
+            <div class="panel panel-info" style="width: 1000px;">
+                <div class="panel-heading" style="color:darkslategrey">Click on the error in the blue text. Then type the correct words in the input field</div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="panel panel-default" style="width: 1000px; padding: 0px 30px 41px 30px;">
+
+                <h1 class="panel panel-info" style="width:260px; padding-left:30px; background-color:rgb(191, 211, 204);">A biography</h1>
+
+                <p class="p" id="p1">Mother Teresa was a missionery <span id="1" class="keys">when</span> worked among the poor people of Calcutta, India.</p>
+                <p class="p" id="p2">She <span id="2" class="keys">born</span> in Macedonia on 26 August 1910. Her father who was Albanian died when she was just eight years old.</p>
+                <p class="p" id="p3">Her mother <span id="3" class="keys">left</span> alone to bring up the family.</p>
+                <p class="p" id="p4">Agnes left home in September 1928. She had wanted <span id="4" class="keys">becoming</span> a missionary from a very young age, so she joined a convent in Ireland.</p>
+                <p class="p" id="p5">She was given the name Teresa, and in 1929 she was sent to St Mary's High School Convent in Calcutta, <span id="5" class="keys">which</span> she worked as a teacher.</p>
+                <p class="p" id="p6">She <span id="6" class="keys">still was</span> working there in 1937, as Mother Teresa.</p>
+            </div>
+        </div>
+
+        <div id="image">
+            <img src="lib/image/Teresa.jpg" class="img-circle" id="teresa">
+            <pre id="caption" class="text-info">    Mother Teresa</pre>
+        </div>
+
+        <div id="inputs">
+            <input type="text" id="guess" class="input" placeholder="Type the correct word">
+            <div id="wrong"></div>
+            <button type="submit" id="checker" class="btn">Check Answer</button>
+        </div>
+
+        <div id="result"></div>
+    </div>
+
+    <!-- Modal content -->
+    <div class="container">
+        <button type="button" style="display:none;" class="btn btn-primary btn-lg" id="myBtn">Open Modal</button>
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title">iTUTOR says</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p style="color:'#449d44';">Congratulation. You have finished.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" onclick="ClaerBlur()" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <span class="fa fa-spin">
+            <img src="iTutor.ico" width="16px" height="16px">
+        </span>
+
+        <span>iTutor</span>
+    </footer>
+
+
+    <script type="text/javascript">
+        function ClaerBlur() {
+            document.head.removeChild(document.head.lastChild);
+            document.body.style.filter = 'blur(0)';
+        }
+    </script>
+    <script src="lib/js/lib.js"></script>
+    <script src="lib/js/paragraph.js"></script>
+    <script src="lib/js/ks.js"></script>
+    <script src="lib/js/app_ui.js"></script>
+    <script src="lib/js/app.js"></script>
+</body>
+</html>

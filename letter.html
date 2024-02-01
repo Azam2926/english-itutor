@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>iTutor</title>
+    <link rel="icon" href="iTutor.ico">
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/css/style.css">
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div id="paragraphs">
+    <div class="container">
+        <div class="panel panel-info" style="width: 1000px;">
+            <div class="panel-heading" style="color:darkslategrey">Click on the error in the blue text. Then type the
+                correct words in the input field
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="panel panel-default" style="width: 1000px; padding: 0px 30px 41px 30px;"><h1
+                class="panel panel-info" style="width:300px; padding-left:30px; background-color:rgb(191, 211, 204);">A
+            informal letter</h1>
+            <p class="p" id="p1" style="opacity: 1; cursor: pointer; color: blue;">How are you? I'm very well. <span
+                    class="keys" id="1">I'm</span> in Dublin for two weeks now. I'm studying at a language school. My
+                host family are Mr and Mrs Kendall.</p>
+            <p class="p" id="p2"><span class="keys" id="2">They</span> both very nice. Mr Kendall teaches in a school.
+            </p>
+            <p class="p" id="p3">I study in the morning with my teacher, Ann. We <span class="keys" id="3">aren't</span>
+                get too much homework.</p>
+            <p class="p" id="p4">In the afternoons I go sightseeing. Dublin is more exciting <span class="keys" id="4">that</span>
+                my town.</p>
+            <p class="p" id="p5">There are lots of places to visit. I like modern art, so I <span class="keys" id="5">visit often</span>
+                galleries and museums. I've met a girl named Martina. She's from Spain. We watched a film together last
+                night.</p>
+            <p class="p" id="p6">Why <span class="keys" id="6">not you </span>come to Dublin for a weekend? Write to me
+                soon. Love, Kati.</p></div>
+    </div>
+    <div id="image"><img class="img-rounded" src="lib/images/itutor/1.jpg"></div>
+    <div id="inputs"><input class="input" id="guess" type="text" placeholder="Type the correct word">
+        <div id="wrong"></div>
+        <button class="btn" id="checker" type="submit">Check Answer</button>
+    </div>
+    <div id="result"></div>
+</div><!-- Modal content-->
+<div class="container">
+    <button class="btn btn-primary btn-lg" id="myBtn" type="button" style="display:none;">Open Modal</button>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal">×</button>
+                    <h2 class="modal-title">iTUTOR says</h2></div>
+                <div class="modal-body"><p style="color:'#449d44';">Congratulation. You have finished.</p></div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" type="button" onclick="ClaerBlur()" data-dismiss="modal">Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer id="footer"><span class="fa fa-spin"><img src="lib/images/itutor/iTutor.ico" width="16px"
+                                                  height="16px"></span><span>iTutor</span></footer>
+<script src="lib/javascripts/itutor/lib.js"></script>
+<script src="lib/javascripts/itutor/paragraph.js"></script>
+<script src="lib/javascripts/itutor/ks.js"></script>
+<script src="lib/javascripts/itutor/app_ui.js"></script>
+<script src="lib/javascripts/itutor/apps/app_letter.js"></script>
+</body>
+</html>
