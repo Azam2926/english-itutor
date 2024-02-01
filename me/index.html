@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ME</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="me/lib/image/ME.png">
+    <link rel="stylesheet" href="me/lib/style/style.css">
+</head>
+
+<body style="background: linear-gradient(darkcyan, lightblue);height: 675px;">
+
+    <h1 style="margin: 0;padding: 5px;text-align:center; color:rgba(145, 253, 215); border: 2px solid rgba(38, 199, 143, 0.2) ">Match words depend on images and drag and drop them or click a word and click matching image</h1>
+    <div class="containerBma">
+        <div class="row">
+            <div class="words"></div>
+            <div class="images"></div>
+        </div>
+    </div>
+
+    <!-- Modal content -->
+    <div class="container">
+        <button type="button" style="display:none;" id="myBtn">Open Modal</button>
+        <div class="modal" id="myModal">
+            <div class="modal_dialog">
+                <div class="modal_content">
+                    <div class="modal_header">
+                        <button type="button" onclick="ClaerBlur()" class="close btn btn-success" data-dismiss="modal">&times;</button>
+                        <h2 class="modal_title">ME says</h2>
+                    </div>
+                    <div class="modal_body">
+                        <p style="color:'#449d44';">Congratulation. You have finished.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        function ClaerBlur() {
+            if (document.head.lastChild.nodeName == 'STYLE')
+                document.head.removeChild(document.head.lastChild);
+            document.body.style.filter = 'blur(0)';
+            document.getElementsByClassName('modal')[0].style.display = 'none';
+        }
+    </script>
+    <script src="me/lib/script/app.js "></script>
+</body>
+
+</html>
